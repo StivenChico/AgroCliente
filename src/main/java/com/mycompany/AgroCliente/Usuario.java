@@ -10,38 +10,60 @@ package com.mycompany.AgroCliente;
  */
 public class Usuario {
 
-    public Usuario(String Nombre, int Edad) {
-        this.Nombre = Nombre;
-        this.Edad = Edad;
-    }
-    private String Nombre;
-    private int Edad;
 
+    private int id;
+    private String nombre_usuario;
+    private String contraseña;
+
+    public Usuario(int id, String nombre_usuario, String contraseña) {
+        this.id = id;
+        this.nombre_usuario = nombre_usuario;
+        this.contraseña = contraseña;
+    }
+    
     /**
      * @return the Nombre
      */
-    public String getNombre() {
-        return Nombre;
+    
+    /**
+     * @return the id
+     */
+    public int getId() {
+        return id;
     }
 
     /**
-     * @param Nombre the Nombre to set
+     * @param id the id to set
      */
-    public void setNombre(String Nombre) {
-        this.Nombre = Nombre;
+    public void setId(int id) {
+        this.id = id;
     }
 
     /**
-     * @return the Edad
+     * @return the nombre_usuario
      */
-    public int getEdad() {
-        return Edad;
+    public String getNombre_usuario() {
+        return nombre_usuario;
     }
 
     /**
-     * @param Edad the Edad to set
+     * @param nombre_usuario the nombre_usuario to set
      */
-    public void setEdad(int Edad) {
-        this.Edad = Edad;
+    public void setNombre_usuario(String nombre_usuario) {
+        this.nombre_usuario = nombre_usuario;
+    }
+
+    /**
+     * @return the contraseña
+     */
+    public String getContraseña() {
+        return contraseña;
+    }
+
+    /**
+     * @param contraseña the contraseña to set
+     */
+    public void setContraseña(String contraseña) {
+        this.contraseña = contraseña;
     }
 }

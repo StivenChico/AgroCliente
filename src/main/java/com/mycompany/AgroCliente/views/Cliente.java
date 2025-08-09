@@ -154,8 +154,9 @@ public class Cliente extends javax.swing.JFrame {
         Clientes Cliente =new Clientes();
         Cliente.setNombre(nombreTxt.getText());
         Cliente.setApellido(apellidoTxt.getText());
+        Cliente.setId_tipo_documento(1);
         Cliente.setDocumento(DocumentoTxt.getText());
-        
+        Cliente.GuardarCliente();
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**

@@ -4,16 +4,16 @@ package com.mycompany.AgroCliente;
 
 import java.sql.*;
 public class UsuarioDAO {
-    private static final String URL = "jdbc:sqlserver://localhost:1433;databaseName=TestDB";
-    private static final String USER = "tu_usuario";
-    private static final String PASSWORD = "tu_contraseña";
+    private static final String URL = "jdbc:sqlserver:129.151.109.58:1433;databaseName=g8";
+    private static final String USER = "user_g8";
+    private static final String PASSWORD = "Pass_g8!";
     // Guardar usuario
     public static void guardarUsuario(Usuario usuario) {
         String sql = "INSERT INTO Usuarios (nombre, edad) VALUES (?, ?)";
         try (Connection conn = DriverManager.getConnection(URL, USER, PASSWORD);
              PreparedStatement stmt = conn.prepareStatement(sql)) {
-            stmt.setString(1, usuario.getNombre());
-            stmt.setInt(2, usuario.getEdad());
+            stmt.setString(1, usuario.getNombre_usuario());
+            stmt.setString(2, usuario.getContraseña());
             stmt.executeUpdate();
             System.out.println(" Usuario guardado");
         } catch (SQLException e) {
@@ -28,9 +28,10 @@ public class UsuarioDAO {
             stmt.setInt(1, id);
             ResultSet rs = stmt.executeQuery();
             if (rs.next()) {
-                String nombre = rs.getString("nombre");
-                int edad = rs.getInt("edad");
-                return new Usuario(nombre, edad);
+                int ids = rs.getInt("id_usuario");
+                String nombre = rs.getString("nombre_usuario");
+                String contraseña = rs.getString("contraseña");
+                return new Usuario(ids, nombre, contraseña);
             } else {
                 System.out.println(" Usuario no encontrado con ID: " + id);
                 return null;
