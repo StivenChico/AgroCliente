@@ -4,6 +4,8 @@
  */
 package com.mycompany.agrocliente.views;
 
+import com.mycompany.AgroCliente.Clientes;
+
 /**
  *
  * @author estudiante
@@ -96,16 +98,16 @@ public class Cliente extends javax.swing.JFrame {
                         .addGap(94, 94, 94)
                         .addComponent(jButton1))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
+                        .addGap(85, 85, 85)
                         .addComponent(jLabel6)))
                 .addContainerGap(34, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
+                .addGap(29, 29, 29)
                 .addComponent(jLabel6)
-                .addGap(18, 18, 18)
+                .addGap(28, 28, 28)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(nombreTxt, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -149,9 +151,10 @@ public class Cliente extends javax.swing.JFrame {
     }//GEN-LAST:event_docboxActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        String Nombre = nombreTxt.getText();
-        String Apellido = apellidoTxt.getText();
-        String Documento =DocumentoTxt.getText();
+        Clientes Cliente =new Clientes();
+        Cliente.setNombre(nombreTxt.getText());
+        Cliente.setApellido(apellidoTxt.getText());
+        Cliente.setDocumento(DocumentoTxt.getText());
         
     }//GEN-LAST:event_jButton1ActionPerformed
 
