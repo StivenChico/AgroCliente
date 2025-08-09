@@ -7,6 +7,7 @@ package com.mycompany.agrocliente;
 /**
  *
  * @author estudiante
+ * @author moises-solis
  */
 public class AgroCliente {
 
